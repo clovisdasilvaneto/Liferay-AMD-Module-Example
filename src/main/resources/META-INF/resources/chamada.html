@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="logger.es.js"></script>
+</head>
+<body>
+
+
+<aui:script require="js-logger/logger.es">
+	var Logger = jsLoggerLoggerEs.default;
+
+	var loggerOne = new Logger('*** -> ');
+	loggerOne.log('Hello nino :)');
+
+	var loggerDefault = new Logger();
+	loggerDefault.log('World');
+</aui:script>
+
+
+<script>
+	require("js-logger/logger.es", function(NevinhaLog) {
+		var Logger = NevinhaLog.default;
+
+		var loggerOne = new Logger('*** -> ');
+		loggerOnea.log('Hello nino :)');
+	}, function(error) {
+		console.error(error)
+	});
+</script>
+</body>
+</html>
